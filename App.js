@@ -1,26 +1,22 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import Loading from "./Loading";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <View style={styles.yellowView} />
-      <View style={styles.blueView} />
-    </View>
-  );
+  return <Loading />;
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: "flex-end",
+    paddingHorizontal: 30,
+    paddingVertical: 100,
+    backgroundColor: "#FDF6AA",
   },
-  yellowView: {
-    flex: 1,
-    backgroundColor: "yellow",
-  },
-  blueView: {
-    flex: 3,
-    backgroundColor: "blue",
+  text: {
+    color: "#2c2c2c",
+    fontSize: 30,
   },
 });
